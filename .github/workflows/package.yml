@@ -27,10 +27,12 @@ jobs:
         run: sudo apt install libarchive-tools
 
       - name: Check startup
-        run: make startup
+        run: |
+          make startup
 
       - name: Backup packages
-        run: make backup
+        run: |
+          make backup
 
       - name: Commit files
         run: |
