@@ -1,0 +1,49 @@
+name: CI for Emacs packages
+
+on:
+  push:
+    branches: main
+  schedule:
+    - cron: "0 9 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        emacs_version:
+          - 28.1
+    steps:
+      - uses: purcell/setup-emacs@master
+        with:
+          version: ${{ matrix.emacs_version }}
+
+      - uses: actions/checkout@v2
+
+      - name: Print emacs version
+        run: emacs --version
+
+      - name: Install dependency
+        run: sudo apt install libarchive-tools
+
+      - name: Check startup
+        run: ./startup.sh
+
+      - name: Backup packages
+        run: ./backup.sh
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          cd ~/myelpa
+          git add .
+          git commit -m "snapshot $(date '+%d/%m/%y %H:%M:%S')"
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          directory: ~/myelpa
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: packages
+          force: true
