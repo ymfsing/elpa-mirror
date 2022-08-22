@@ -39,9 +39,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          cd ~/myelpa
+          cd /tmp/myelpa
           git add .
-          git commit -m "snapshot $(date '+%d/%m/%y %H:%M:%S')"
+          git commit -m "$(date '+%d/%m/%y %H:%M:%S')"
 
       - name: Push
         uses: ad-m/github-push-action@master
