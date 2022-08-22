@@ -32,7 +32,8 @@ jobs:
 
       - name: Backup packages
         run: |
-          mkdir -p /tmp/myelpa
+          mkdir -p "/tmp/myelpa"
+          ls "/tmp"
           make backup
 
       - name: Commit files
