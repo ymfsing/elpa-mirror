@@ -31,7 +31,9 @@ jobs:
         run: make startup
 
       - name: Backup packages
-        run: make backup
+        run: |
+          mkdir -p /tmp/myelpa
+          make backup
 
       - name: Commit files
         run: |

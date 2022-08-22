@@ -6,4 +6,4 @@ startup:
 	emacs --batch -l init.el
 
 backup:
-	mkdir -p /tmp/myelpa && emacs --batch -l init.el -l --eval='(setq elpamr-default-output-directory "/tmp/myelpa")' --eval='(elpamr-create-mirror-for-installed)'
+	emacs --batch -l init.el -l --eval='(setq elpamr-default-output-directory "/tmp/myelpa")' --eval='(elpamr-create-mirror-for-installed)'
