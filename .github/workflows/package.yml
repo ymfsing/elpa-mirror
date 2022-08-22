@@ -32,8 +32,7 @@ jobs:
 
       - name: Backup packages
         run: |
-          mkdir -p "/home/runner/.emacs.d/myelpa"
-          ls "/home/runner/.emacs.d"
+          mkdir -p "$HOME/myelpa"
           make backup
 
       - name: Commit files
