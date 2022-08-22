@@ -25,9 +25,17 @@
 
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
 (defvar prelude-packages
-  '(gnu-elpa-keyring-update
+  '(
+	;; init-packages
+	gnu-elpa-keyring-update
 	quelpa
-	elpa-mirror)
+	elpa-mirror
+	auto-package-update
+	;; init-base
+	gcmh
+	;; init-keymaps
+	evil
+	)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -62,7 +70,8 @@ Missing packages are installed automatically."
 
 ;; quelpa packages
 
-(quelpa '(hydra :repo "abo-abo/hydra" :fetcher github))
+(quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
+
 
 
 ;;; init.el ends here
