@@ -37,10 +37,10 @@ jobs:
 
       - name: Commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           cd /tmp/myelpa
           git init
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -m "$(date '+%d/%m/%y %H:%M:%S')"
 
