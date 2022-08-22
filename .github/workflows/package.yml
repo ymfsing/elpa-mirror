@@ -23,8 +23,6 @@ jobs:
       - name: Print emacs version
         run: |
           emacs --version
-          ls -al ~
-          ls -al ~/.emacs.d
 
       - name: Install dependency
         run: sudo apt install libarchive-tools
@@ -46,7 +44,7 @@ jobs:
       - name: Push
         uses: ad-m/github-push-action@master
         with:
-          directory: ~/myelpa
+          directory: /tmp/myelpa
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: packages
           force: true
