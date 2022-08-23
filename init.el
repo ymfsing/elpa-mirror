@@ -191,7 +191,11 @@ Missing packages are installed automatically."
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
-(quelpa '(telega :stable t))
+(quelpa '(telega
+		  :fetcher github
+		  :repo "zevlg/telega.el"
+		  :branch "release-0.8.0"
+		  :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
