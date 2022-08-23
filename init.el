@@ -23,7 +23,7 @@
 		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")
 		))
 
-(add-to-list 'package-pinned-packages '(telega . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(telega . "stable-melpa") t)
 
 
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
