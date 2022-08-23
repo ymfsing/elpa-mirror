@@ -110,7 +110,7 @@
 	anki-editor
 	habitica
 	org-roam
-	emacsql-sqlite-builtin
+	;; emacsql-sqlite-builtin
 	org-roam-ui
 	;; init-ruby
 	ruby-mode
