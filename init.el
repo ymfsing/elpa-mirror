@@ -90,6 +90,10 @@
 	devdocs-browser
 	dap-mode
 	germanium
+	;; init-clisp
+	elisp-demos
+	sly
+	suggest
 	;; init-lua
 	lua-mode
 	;; init-markdown
