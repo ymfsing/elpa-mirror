@@ -23,7 +23,7 @@
 		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")
 		))
 
-(add-to-list 'package-pinned-packages '(telega . "stable-melpa") t)
+;; (add-to-list 'package-pinned-packages '(telega . "stable-melpa") t)
 
 
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
@@ -134,7 +134,7 @@
 	reddigg
 	hnreader
 	;; init-chat
-	telega
+	;; telega
 	;; init-draw
 	plantuml-mode
 	osm
@@ -191,7 +191,14 @@ Missing packages are installed automatically."
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
+(quelpa '(telega :stable t))
+
 (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
+
+(quelpa '(emacsql-sqlite-module
+		  :fetcher githu
+		  :repo "emacscollective/emacsql-sqlite-builtin"
+		  :files ("emacsql-sqlite-module.el")))
 
 
 
