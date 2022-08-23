@@ -17,14 +17,10 @@
 
 (setq package-archives
       '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
-		("stable-melpa"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/stable-melpa/")
         ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
         ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
 		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")
 		))
-
-;; (add-to-list 'package-pinned-packages '(telega . "stable-melpa") t)
-
 
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
 (defvar prelude-packages
@@ -72,6 +68,7 @@
 	all-the-icons
 	beacon
 	doom-themes
+  doom-modeline
 	diminish
 	rainbow-delimiters
 	symbol-overlay
@@ -133,8 +130,6 @@
 	;; init-browser
 	reddigg
 	hnreader
-	;; init-chat
-	;; telega
 	;; init-draw
 	plantuml-mode
 	osm
@@ -199,10 +194,10 @@ Missing packages are installed automatically."
 
 (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
-(quelpa '(emacsql-sqlite-module
+(quelpa '(emacsql-sqlite-builtin
 		  :fetcher github
 		  :repo "emacscollective/emacsql-sqlite-builtin"
-		  :files ("emacsql-sqlite-module.el")))
+		  :files ("emacsql-sqlite-builtin.el")))
 
 
 
