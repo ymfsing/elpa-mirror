@@ -23,6 +23,9 @@
 		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")
 		))
 
+(add-to-list 'package-pinned-packages '(telega . "melpa-stable") t)
+
+
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
 (defvar prelude-packages
   '(
@@ -32,9 +35,113 @@
 	elpa-mirror
 	auto-package-update
 	;; init-base
+	esup
 	gcmh
+	;; init-chinese
+	pyim
+	osx-dictionary
+	fanyi
+	;; init-completion
+	yasnippet
+	yasnippet-snippets
+	company
+	cape
+	corfu
+	;; init-edit
+	vundo
+	grab-mac-link
+	evil-nerd-commenter
+	avy
+	hl-todo
+	speed-type
+	flycheck
+	;; init-file
+	dired-git-info
+	dired-rsync
+	diredfl
 	;; init-keymaps
 	evil
+	evil-lion
+	;; init-minibuffer
+	vertico
+	marginalia
+	orderless
+	consult
+	consult-yasnippet
+	;; init-ui
+	all-the-icons
+	beacon
+	doom-themes
+	diminish
+	rainbow-delimiters
+	symbol-overlay
+	burly
+	winum
+	shackle
+	;; init-vsc
+	magit
+	vc-msg
+	diff-hl
+	;; init-lang
+	eglot
+	lsp-mode
+	lsp-pyright
+	lsp-ui
+	citre
+	format-all
+	aggressive-indent
+	devdocs-browser
+	dap-mode
+	germanium
+	;; init-lua
+	lua-mode
+	;; init-markdown
+	markdown-mode
+	markdown-toc
+	;; init-org
+	org
+	org-contrib
+	org-appear
+	org-download
+	iscroll
+	org-transclusion
+	toc-org
+	ox-pandoc
+	anki-editor
+	habitica
+	org-roam
+	emacsql-sqlite-builtin
+	org-roam-ui
+	;; init-ruby
+	ruby-mode
+	;; init-web
+	web-mode
+	emmet-mode
+	scss-mode
+	sass-mode
+	js2-mode
+	js2-refactor
+	typescript-mode
+	add-node-modules-path
+	vue-mode
+	json-mode
+	impatient-mode
+	;; init-yaml
+	yaml-mode
+	;; init-blog
+	org-static-blog
+	;; init-browser
+	reddigg
+	hnreader
+	;; init-chat
+	telega
+	;; init-draw
+	plantuml-mode
+	osm
+	;; init-gnus
+	nntwitter
+	;; init-leetcode
+	leetcode
 	)
   "A list of packages to ensure are installed at launch.")
 
@@ -70,7 +177,21 @@ Missing packages are installed automatically."
 
 ;; quelpa packages
 
+(quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
+
+(quelpa '(awesome-pair :fetcher github :repo "manateelazycat/awesome-pair"))
+
+(quelpa '(thing-edit :fetcher github :repo "manateelazycat/thing-edit"))
+
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
+
+(quelpa '(lsp-volar :fetcher github :repo "jadestrong/lsp-volar"))
+
+(quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
+
+(quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
+
+(quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
 
 
