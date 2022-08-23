@@ -68,7 +68,7 @@
 	all-the-icons
 	beacon
 	doom-themes
-  doom-modeline
+	doom-modeline
 	diminish
 	rainbow-delimiters
 	symbol-overlay
@@ -107,7 +107,7 @@
 	anki-editor
 	habitica
 	org-roam
-	;; emacsql-sqlite-builtin
+	emacsql-sqlite-builtin
 	org-roam-ui
 	;; init-ruby
 	ruby-mode

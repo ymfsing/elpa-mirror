@@ -1,10 +1,10 @@
-name: CI for Emacs packages
+name: CI for Emacs packages mirror
 
 on:
   push:
     branches: main
   schedule:
-    - cron: "0 9 * * *"
+    - cron: "0 4 * * 7"
 
 jobs:
   build:
