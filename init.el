@@ -198,11 +198,6 @@ Missing packages are installed automatically."
 
 (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
-;; (quelpa '(emacsql-sqlite-builtin
-;; 		  :fetcher github
-;; 		  :repo "emacscollective/emacsql-sqlite-builtin"
-;; 		  :files ("emacsql-sqlite-builtin.el")))
-
 
 
 ;;; init.el ends here
