@@ -89,7 +89,7 @@
 	format-all
 	aggressive-indent
 	devdocs-browser
-	dap-mode
+	;; dap-mode
 	germanium
 	;; init-clisp
 	elisp-demos
