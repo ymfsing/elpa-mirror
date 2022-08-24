@@ -65,6 +65,7 @@
 	consult
 	consult-yasnippet
 	;; init-ui
+	posframe
 	all-the-icons
 	beacon
 	doom-themes
@@ -174,7 +175,12 @@ Missing packages are installed automatically."
 (prelude-install-packages)
 
 
-;; quelpa packages
+;; quelpa packages https://github.com/quelpa/quelpa
+
+(quelpa '(pyim-tsinghua-dict
+		  :fetcher github
+		  :repo "redguardtoo/pyim-tsinghua-dict"
+		  :files ("*.el" "*.pyim")))
 
 (quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
 
