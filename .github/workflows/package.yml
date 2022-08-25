@@ -7,7 +7,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 4 * * 0"
+    - cron: "0 4 * * *"
 
 jobs:
   build:
@@ -45,7 +45,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "$(date '+%d/%m/%y %H:%M:%S')"
+          git commit -m "$(TZ=UTC-8 date '+%y/%m/%d %H:%M:%S')"
 
       - name: Push
         uses: ad-m/github-push-action@master
