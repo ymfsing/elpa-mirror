@@ -178,6 +178,11 @@ Missing packages are installed automatically."
 
 ;; quelpa packages https://github.com/quelpa/quelpa
 
+(setq quelpa-checkout-melpa-p nil
+	  quelpa-update-melpa-p nil
+	  quelpa-melpa-recipe-stores nil
+	  quelpa-git-clone-depth 1)
+
 (quelpa '(pyim-tsinghua-dict
 		  :fetcher github
 		  :repo "redguardtoo/pyim-tsinghua-dict"
