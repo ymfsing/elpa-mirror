@@ -78,7 +78,8 @@
 	shackle
 	;; init-vsc
 	magit
-	vc-msg
+	;; vc-msg
+	blamer
 	diff-hl
 	;; init-lang
 	eglot
