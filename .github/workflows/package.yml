@@ -59,10 +59,18 @@ jobs:
         run: |
           cp -vR ~/.emacs.d/elpa /tmp/mymodule
 
+      - name: Delete files for module
+        run: |
+          cd /tmp/mymodule
+          rm -rf archives
+          rm -rf elpa-mirror*
+          rm -rf quelpa*
+          find . -name '*.elc' | xargs rm -rf
+          find . -name '.signed' | xargs rm -rf
+
       - name: Commit files for module
         run: |
           cd /tmp/mymodule
-          find . -name '*.elc' | xargs rm -rf
           git init
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
