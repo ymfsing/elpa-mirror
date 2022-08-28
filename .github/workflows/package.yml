@@ -63,10 +63,12 @@ jobs:
         run: |
           cd /tmp/mymodule
           rm -rf archives
+          rm -rf gnupg
           rm -rf elpa-mirror*
+          rm -rf gnu-elpa-keyring-update*
           rm -rf quelpa*
+          rm -rf *.signed
           find . -name '*.elc' | xargs rm -rf
-          find . -name '.signed' | xargs rm -rf
 
       - name: Commit files for module
         run: |
