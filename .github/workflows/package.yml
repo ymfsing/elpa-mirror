@@ -1,4 +1,4 @@
-name: CI for Emacs packages mirror
+name: CI for Emacs packages
 
 on:
   push:
@@ -33,12 +33,12 @@ jobs:
       - name: Check startup
         run: make startup
 
-      - name: Backup packages
+      - name: Backup packages for elpa
         run: |
           mkdir -p "/tmp/myelpa"
           make backup
 
-      - name: Commit files
+      - name: Commit files for elpa
         run: |
           cd /tmp/myelpa
           git init
@@ -47,10 +47,32 @@ jobs:
           git add .
           git commit -m "$(TZ=UTC-8 date '+%y/%m/%d %H:%M:%S')"
 
-      - name: Push
+      - name: Push for elpa
         uses: ad-m/github-push-action@master
         with:
           directory: /tmp/myelpa
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: packages
+          branch: elpa
+          force: true
+
+      - name: Backup packages for module
+        run: |
+          cp -vR ~/.emacs.d/elpa /tmp/mymodule
+
+      - name: Commit files for module
+        run: |
+          cd /tmp/mymodule
+          find . -name '*.elc' | xargs rm -rf
+          git init
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "$(TZ=UTC-8 date '+%y/%m/%d %H:%M:%S')"
+
+      - name: Push for module
+        uses: ad-m/github-push-action@master
+        with:
+          directory: /tmp/mymodule
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: module
           force: true
