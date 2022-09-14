@@ -31,8 +31,7 @@ jobs:
         run: |
           sudo apt install libarchive-tools
           sudo timedatectl set-timezone "Asia/Shanghai"
-          echo "date=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_ENV
-          echo "RELEASE_NAME=Released on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "RELEASE_NAME=elpa archive on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
 
       - name: Check startup
@@ -64,6 +63,21 @@ jobs:
         run: |
           cp -vR ~/.emacs.d/elpa /tmp/mymodule
 
+      - name: Archive mymodule for backup
+        run: |
+          cd /tmp
+          tar czf emacs-modules-${{ env.date }}.tar.gz mymodule
+
+      - name: Push release
+        uses: softprops/action-gh-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        with:
+          files: /tmp/emacs-modules-${{ env.date }}.tar.gz
+          name: ${{ env.RELEASE_NAME }}
+          tag_name: ${{ env.TAG_NAME }}
+
+
       - name: Delete files for module
         run: |
           cd /tmp/mymodule
@@ -93,20 +107,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: module
           force: true
-
-      - name: tar mymodule for backup
-        run: |
-          cd /tmp/mymodule
-          rm -rf .git
-          cd /tmp
-          tar czf emacs-modules-${{ env.date }}.tar.gz /tmp/mymodule
-          ls -al /tmp
-
-      - name: Release
-        uses: softprops/action-gh-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-        with:
-          files: /tmp/emacs-modules-${{ env.date }}.tar.gz
-          name: ${{ env.RELEASE_NAME }}
-          tag_name: ${{ env.TAG_NAME }}
