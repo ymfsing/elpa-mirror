@@ -69,6 +69,8 @@ jobs:
           rm -rf quelpa*
           rm -rf *.signed
           find . -name '*.elc' | xargs rm -rf
+          find . -name '*autoloads.el' | xargs rm -rf
+          find . -name '*pkg.el' | xargs rm -rf
 
       - name: Commit files for module
         run: |
