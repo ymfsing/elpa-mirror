@@ -28,7 +28,10 @@ jobs:
           emacs --version
 
       - name: Install dependency
-        run: sudo apt install libarchive-tools
+        run: |
+          sudo apt install libarchive-tools
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          echo "date=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_ENV
 
       - name: Check startup
         run: make startup
@@ -45,7 +48,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "$(TZ=UTC-8 date '+%y/%m/%d %H:%M:%S')"
+          git commit -m "$(date '+%y/%m/%d %H:%M:%S')"
 
       - name: Push for elpa
         uses: ad-m/github-push-action@master
@@ -79,7 +82,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "$(TZ=UTC-8 date '+%y/%m/%d %H:%M:%S')"
+          git commit -m "$(date '+%y/%m/%d %H:%M:%S')"
 
       - name: Push for module
         uses: ad-m/github-push-action@master
@@ -88,3 +91,19 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: module
           force: true
+
+      - name: tar mymodule for backup
+        run: |
+          cd /tmp/mymodule
+          rm -rf .git
+          cd /tmp
+          tar czf emacs-modules-${{ env.date }}.tar.gz /tmp/mymodule
+          ls -al /tmp
+
+      - name: Release
+        uses: softprops/action-gh-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        with:
+          files: /tmp/emacs-modules-${{ env.date }}.tar.gz
+          name: emacs-modules-${{ env.date }}
