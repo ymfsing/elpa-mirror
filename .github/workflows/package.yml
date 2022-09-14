@@ -1,4 +1,4 @@
-name: CI for Emacs packages
+name: Emacs packages publisher
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         emacs_version:
-          - snapshot
+          - 28.2
     steps:
       - uses: purcell/setup-emacs@master
         with:
@@ -83,6 +83,7 @@ jobs:
           cd /tmp/mymodule
           rm -rf archives
           rm -rf gnupg
+          rm -rf auto-package-update*
           rm -rf elpa-mirror*
           rm -rf gnu-elpa-keyring-update*
           rm -rf quelpa*

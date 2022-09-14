@@ -13,8 +13,6 @@
 (require 'cl-lib)
 (require 'package)
 
-(package-initialize)
-
 (setq package-archives
       '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
         ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
@@ -22,28 +20,30 @@
 		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")
 		))
 
+(package-initialize)
+
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
 (defvar prelude-packages
   '(
-	;; init-packages
+	;;; init-packages
 	gnu-elpa-keyring-update
 	quelpa
 	elpa-mirror
 	auto-package-update
-	;; init-base
-	esup
+	;;; init
+	;; esup
 	gcmh
-	;; init-chinese
+	;;; init-chinese
 	pyim
 	osx-dictionary
 	fanyi
-	;; init-completion
+	;;; init-completion
 	yasnippet
 	yasnippet-snippets
 	company
 	cape
 	corfu
-	;; init-edit
+	;;; init-edit
 	vundo
 	grab-mac-link
 	evil-nerd-commenter
@@ -51,20 +51,21 @@
 	hl-todo
 	speed-type
 	flycheck
-	;; init-file
+	;;; init-file
 	dired-git-info
 	dired-rsync
 	diredfl
-	;; init-keymaps
+	;;; init-keymaps
 	evil
 	evil-lion
-	;; init-minibuffer
+	;;; init-minibuffer
 	vertico
 	marginalia
 	orderless
 	consult
 	consult-yasnippet
-	;; init-ui
+	embark
+	;;; init-ui
 	posframe
 	all-the-icons
 	beacon
@@ -76,13 +77,13 @@
 	burly
 	winum
 	shackle
-	;; init-vsc
+	;;; init-vsc
 	magit
-	;; vc-msg
+	;;; vc-msg
 	blamer
 	diff-hl
-	;; init-lang
-	eglot
+	;;; init-lang
+	;; eglot
 	lsp-mode
 	lsp-pyright
 	lsp-ui
@@ -92,16 +93,16 @@
 	devdocs-browser
 	;; dap-mode
 	germanium
-	;; init-clisp
+	;;; init-clisp
 	elisp-demos
 	sly
 	suggest
-	;; init-lua
+	;;; init-lua
 	lua-mode
-	;; init-markdown
+	;;; init-markdown
 	markdown-mode
 	markdown-toc
-	;; init-org
+	;;; init-org
 	org
 	org-contrib
 	org-appear
@@ -113,11 +114,11 @@
 	anki-editor
 	habitica
 	org-roam
-	emacsql-sqlite-builtin
+	;; emacsql-sqlite-builtin for emacs 29
 	org-roam-ui
-	;; init-ruby
+	;;; init-ruby
 	ruby-mode
-	;; init-web
+	;;; init-web
 	web-mode
 	emmet-mode
 	scss-mode
@@ -129,18 +130,18 @@
 	vue-mode
 	json-mode
 	impatient-mode
-	;; init-yaml
+	;;; init-yaml
 	yaml-mode
-	;; init-blog
+	;;; init-blog
 	org-static-blog
-	;; init-browser
-	reddigg
+	;;; init-browser
+	;; reddigg
 	hnreader
-	;; init-draw
+	;;; init-draw
 	plantuml-mode
 	osm
-	;; init-gnus
-	nntwitter
+	;;; init-gnus
+	;; nntwitter
 	;; init-leetcode
 	leetcode
 	)
@@ -206,7 +207,7 @@ Missing packages are installed automatically."
 		  :branch "release-0.8.0"
 		  :files (:defaults "etc" "server" "contrib" "Makefile")))
 
-(quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
+;; (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
 
 
