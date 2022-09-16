@@ -77,7 +77,6 @@ jobs:
           name: ${{ env.RELEASE_NAME }}
           tag_name: ${{ env.TAG_NAME }}
 
-
       - name: Delete files for module
         run: |
           cd /tmp/mymodule

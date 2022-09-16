@@ -58,6 +58,7 @@
 	;;; init-keymaps
 	evil
 	evil-lion
+	meow
 	;;; init-minibuffer
 	vertico
 	marginalia
