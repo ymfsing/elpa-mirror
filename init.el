@@ -56,9 +56,9 @@
 	dired-rsync
 	diredfl
 	;;; init-keymaps
-	evil
-	evil-lion
-	;; meow
+	;; evil
+	;; evil-lion
+	meow
 	;;; init-minibuffer
 	vertico
 	marginalia
