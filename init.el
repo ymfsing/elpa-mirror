@@ -39,7 +39,7 @@
 	fanyi
 	;;; init-completion
 	yasnippet
-	yasnippet-snippets
+	;; yasnippet-snippets
 	company
 	cape
 	corfu
@@ -47,7 +47,7 @@
 	vundo
 	grab-mac-link
 	evil-nerd-commenter
-	avy
+	;; avy
 	hl-todo
 	speed-type
 	flycheck
@@ -64,7 +64,7 @@
 	marginalia
 	orderless
 	consult
-	consult-yasnippet
+	;; consult-yasnippet
 	embark
 	;;; init-ui
 	posframe
@@ -74,21 +74,21 @@
 	doom-modeline
 	diminish
 	rainbow-delimiters
-	symbol-overlay
-	burly
+	;; symbol-overlay
+	;; burly
 	winum
 	shackle
 	;;; init-vsc
-	magit
+	;; magit
 	;;; vc-msg
 	blamer
 	diff-hl
 	;;; init-lang
-	;; eglot
-	lsp-mode
-	lsp-pyright
-	lsp-ui
-	citre
+	eglot
+	;; lsp-mode
+	;; lsp-pyright
+	;; lsp-ui
+	;; citre
 	format-all
 	aggressive-indent
 	devdocs-browser
