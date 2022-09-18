@@ -199,6 +199,10 @@ Missing packages are installed automatically."
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
 
+(quelpa '(keyfreq :fetcher github :repo "dacap/keyfreq"))
+
+(quelpa '(keycast :fetcher github :repo "tarsius/keycast"))
+
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
