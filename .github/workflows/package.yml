@@ -33,6 +33,7 @@ jobs:
           sudo timedatectl set-timezone "Asia/Shanghai"
           echo "RELEASE_NAME=elpa archive on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAR_NAME=emacs-modules-$(date +%Y%m%d%H%M).tar.gz" >> $GITHUB_ENV
 
       - name: Check startup
         run: make startup
@@ -66,14 +67,14 @@ jobs:
       - name: Archive mymodule for backup
         run: |
           cd /tmp
-          tar czf emacs-modules-${{ env.date }}.tar.gz mymodule
+          tar czf ${{ env.TAR_NAME }} mymodule
 
       - name: Push release
         uses: softprops/action-gh-release@master
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         with:
-          files: /tmp/*.tar.gz
+          files: /tmp/${{ env.TAR_NAME }}
           name: ${{ env.RELEASE_NAME }}
           tag_name: ${{ env.TAG_NAME }}
 
