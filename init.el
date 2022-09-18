@@ -107,7 +107,7 @@
 	dockerfile-mode
 	docker-compose-mode
 	;;; init-latex
-	auctex
+	;; auctex
 	;;; init-lua
 	lua-mode
 	;;; init-markdown

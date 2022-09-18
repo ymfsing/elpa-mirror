@@ -73,7 +73,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         with:
-          files: /tmp/emacs-modules-${{ env.date }}.tar.gz
+          files: /tmp/*.tar.gz
           name: ${{ env.RELEASE_NAME }}
           tag_name: ${{ env.TAG_NAME }}
 
