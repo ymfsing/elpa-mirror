@@ -60,6 +60,8 @@
 	;; evil
 	;; evil-lion
 	meow
+	keyfreq
+	keycast
 	;;; init-minibuffer
 	vertico
 	marginalia
@@ -95,10 +97,17 @@
 	devdocs-browser
 	;; dap-mode
 	germanium
+	;;; init-applescript
+	applescript-mode
 	;;; init-clisp
 	elisp-demos
 	sly
 	suggest
+	;;; init-docker
+	dockerfile-mode
+	docker-compose-mode
+	;;; init-latex
+	auctex
 	;;; init-lua
 	lua-mode
 	;;; init-markdown
@@ -198,10 +207,6 @@ Missing packages are installed automatically."
 (quelpa '(thing-edit :fetcher github :repo "manateelazycat/thing-edit"))
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
-
-(quelpa '(keyfreq :fetcher github :repo "dacap/keyfreq"))
-
-(quelpa '(keycast :fetcher github :repo "tarsius/keycast"))
 
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
