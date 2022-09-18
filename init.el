@@ -45,7 +45,8 @@
 	corfu
 	;;; init-edit
 	vundo
-	grab-mac-link
+	;; grab-mac-link
+	org-mac-link
 	evil-nerd-commenter
 	;; avy
 	hl-todo
