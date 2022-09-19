@@ -133,13 +133,7 @@
 	;;; init-web
 	web-mode
 	emmet-mode
-	scss-mode
-	sass-mode
-	js2-mode
-	js2-refactor
 	typescript-mode
-	add-node-modules-path
-	vue-mode
 	json-mode
 	impatient-mode
 	;;; init-yaml
