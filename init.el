@@ -134,9 +134,9 @@
 	web-mode
 	emmet-mode
 	typescript-mode
-	json-mode
 	impatient-mode
-	;;; init-yaml
+	;;; init-serialization
+	json-mode
 	yaml-mode
 	;;; init-blog
 	org-static-blog
