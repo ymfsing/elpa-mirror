@@ -40,9 +40,10 @@
 	;;; init-completion
 	yasnippet
 	;; yasnippet-snippets
-	company
+	;; company
 	cape
 	corfu
+	corfu-terminal
 	;;; init-edit
 	vundo
 	;; grab-mac-link
@@ -199,6 +200,8 @@ Missing packages are installed automatically."
 		  :fetcher github
 		  :repo "redguardtoo/pyim-tsinghua-dict"
 		  :files ("*.el" "*.pyim")))
+
+(quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
 
 (quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
 
