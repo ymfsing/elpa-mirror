@@ -79,7 +79,7 @@
 	diminish
 	rainbow-delimiters
 	;; symbol-overlay
-	;; burly
+	burly
 	winum
 	shackle
 	;;; init-vsc
@@ -100,15 +100,15 @@
 	germanium
 	;;; init-applescript
 	applescript-mode
-	;;; init-clisp
-	elisp-demos
-	sly
-	suggest
 	;;; init-docker
 	dockerfile-mode
 	docker-compose-mode
 	;;; init-latex
 	;; auctex
+	;;; init-lisp
+	elisp-demos
+	sly
+	suggest
 	;;; init-lua
 	lua-mode
 	;;; init-markdown
