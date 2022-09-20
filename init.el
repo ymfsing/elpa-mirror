@@ -88,10 +88,10 @@
 	blamer
 	diff-hl
 	;;; init-lang
-	eglot
-	;; lsp-mode
-	;; lsp-pyright
-	;; lsp-ui
+	;; eglot
+	lsp-mode
+	lsp-pyright
+	lsp-ui
 	;; citre
 	format-all
 	aggressive-indent
