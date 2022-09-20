@@ -68,7 +68,7 @@
 	marginalia
 	orderless
 	consult
-	;; consult-yasnippet
+	consult-flycheck
 	embark
 	;;; init-ui
 	posframe
