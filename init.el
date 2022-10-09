@@ -17,42 +17,41 @@
       '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
         ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
         ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
-		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")
-		))
+		("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")))
 
 (package-initialize)
 
 ;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
 (defvar prelude-packages
   '(
-	;;; init-packages
-	gnu-elpa-keyring-update
-	quelpa
-	elpa-mirror
-	auto-package-update
-	;;; init
-	;; esup
-	gcmh
-	;;; init-chinese
-	pyim
-	osx-dictionary
-	fanyi
-	;;; init-completion
-	yasnippet
-	;; yasnippet-snippets
-	;; company
-	cape
-	corfu
-	corfu-terminal
-	;;; init-edit
-	vundo
-	;; grab-mac-link
-	org-mac-link
-	evil-nerd-commenter
-	;; avy
-	hl-todo
-	speed-type
-	flycheck
+    ;;; init-packages
+    gnu-elpa-keyring-update
+    quelpa
+    elpa-mirror
+    auto-package-update
+    ;;; init
+    ;; esup
+    gcmh
+    ;;; init-chinese
+    pyim
+    osx-dictionary
+    fanyi
+    ;;; init-completion
+    yasnippet
+    ;; yasnippet-snippets
+    ;; company
+    cape
+    corfu
+    corfu-terminal
+    ;;; init-edit
+    vundo
+    ;; grab-mac-link
+    org-mac-link
+    evil-nerd-commenter
+    ;; avy
+    hl-todo
+    speed-type
+    flycheck
 	;;; init-file
 	dired-git-info
 	dired-rsync
@@ -94,7 +93,8 @@
 	lsp-ui
 	;; citre
 	format-all
-	aggressive-indent
+	;; BUG can't work when aggressive-indent-mode
+	;; aggressive-indent
 	devdocs-browser
 	;; dap-mode
 	germanium
@@ -126,7 +126,7 @@
 	anki-editor
 	habitica
 	org-roam
-	;; emacsql-sqlite-builtin for emacs 29
+	emacsql-sqlite-builtin ;; for emacs 29
 	org-roam-ui
 	;;; init-ruby
 	ruby-mode
@@ -218,5 +218,14 @@ Missing packages are installed automatically."
 ;; (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
 
+;; some pinned packages
+
+(quelpa '(aggressive-indent
+		  :fetcher github
+		  :repo "Malabarba/aggressive-indent-mode"
+		  :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
+		  :files ("*.el"))
+
+		'
 
 ;;; init.el ends here
