@@ -224,7 +224,7 @@ Missing packages are installed automatically."
 		  :fetcher github
 		  :repo "Malabarba/aggressive-indent-mode"
 		  :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
-		  :files ("*.el"))
+		  :files ("*.el")))
 
 		'
 
