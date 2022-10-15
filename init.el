@@ -81,7 +81,7 @@
     winum
     shackle
     ;;; init-vsc
-    ;; magit
+    magit
     ;;; vc-msg
     blamer
     diff-hl
