@@ -10,19 +10,17 @@
 
 
 ;; Initialize package sources
-(require 'cl-lib)
 (require 'package)
 
 (setq package-archives
       '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
         ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
         ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
-	("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")))
+	    ("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")))
 
 (package-initialize)
 
-;; https://github.com/bbatsov/prelude/blob/master/core/prelude-packages.el
-(defvar prelude-packages
+(defvar mypackages
   '(
     ;;; init-packages
     gnu-elpa-keyring-update
@@ -93,8 +91,7 @@
     lsp-ui
     ;; citre
     format-all
-    ;; BUG can't work when aggressive-indent-mode
-    ;; aggressive-indent
+    aggressive-indent
     devdocs-browser
     ;; dap-mode
     germanium
@@ -153,34 +150,15 @@
     )
   "A list of packages to ensure are installed at launch.")
 
-(defun prelude-packages-installed-p ()
-  "Check if all packages in `prelude-packages' are installed."
-  (cl-every #'package-installed-p prelude-packages))
-
-(defun prelude-require-package (package)
-  "Install PACKAGE unless already installed."
-  (unless (memq package prelude-packages)
-    (add-to-list 'prelude-packages package))
-  (unless (package-installed-p package)
-    (package-install package)))
-
-(defun prelude-require-packages (packages)
-  "Ensure PACKAGES are installed.
-Missing packages are installed automatically."
-  (mapc #'prelude-require-package packages))
-
-(defun prelude-install-packages ()
-  "Install all packages listed in `prelude-packages'."
-  (unless (prelude-packages-installed-p)
-    ;; check for new packages (package versions)
-    (message "%s" "Emacs Prelude is now refreshing its package database...")
-    (package-refresh-contents)
-    (message "%s" " done.")
-    ;; install the missing packages
-    (prelude-require-packages prelude-packages)))
-
-;; run package installation
-(prelude-install-packages)
+;; Scans the list in myPackages
+;; If the package listed is not already installed, install it
+(mapc #'(lambda (package)
+          (unless (package-installed-p package)
+            (unless (or (assoc package package-archive-contents) no-refresh)
+              ;; (message "Missing package: %s" package)
+              (package-refresh-contents))
+            (package-install package)))
+      myPackages)
 
 
 ;; quelpa packages https://github.com/quelpa/quelpa
@@ -191,9 +169,9 @@ Missing packages are installed automatically."
       quelpa-git-clone-depth 1)
 
 (quelpa '(pyim-tsinghua-dict
-	  :fetcher github
-	  :repo "redguardtoo/pyim-tsinghua-dict"
-	  :files ("*.el" "*.pyim")))
+	      :fetcher github
+	      :repo "redguardtoo/pyim-tsinghua-dict"
+	      :files ("*.el" "*.pyim")))
 
 (quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
 
@@ -210,21 +188,21 @@ Missing packages are installed automatically."
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
 (quelpa '(telega
-	  :fetcher github
-	  :repo "zevlg/telega.el"
-	  :branch "release-0.8.0"
-	  :files (:defaults "etc" "server" "contrib" "Makefile")))
+	      :fetcher github
+	      :repo "zevlg/telega.el"
+	      :branch "release-0.8.0"
+	      :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
 
 ;; some pinned packages
 
-(quelpa '(aggressive-indent
-	  :fetcher github
-	  :repo "Malabarba/aggressive-indent-mode"
-	  :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
-	  :files ("*.el")))
+;; (quelpa '(aggressive-indent
+;; 	      :fetcher github
+;; 	      :repo "Malabarba/aggressive-indent-mode"
+;; 	      :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
+;; 	      :files ("*.el")))
 
 
 
