@@ -19,6 +19,7 @@
 	    ("nongnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/nongnu/")))
 
 (package-initialize)
+(package-refresh-contents)
 
 (defvar mypackages
   '(
@@ -150,15 +151,12 @@
     )
   "A list of packages to ensure are installed at launch.")
 
-;; Scans the list in myPackages
+;; Scans the list in mypackages
 ;; If the package listed is not already installed, install it
 (mapc #'(lambda (package)
           (unless (package-installed-p package)
-            (unless (or (assoc package package-archive-contents) no-refresh)
-              ;; (message "Missing package: %s" package)
-              (package-refresh-contents))
             (package-install package)))
-      myPackages)
+      mypackages)
 
 
 ;; quelpa packages https://github.com/quelpa/quelpa
