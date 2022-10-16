@@ -151,6 +151,7 @@
     ;; nntwitter
     ;;; init-leetcode
     leetcode
+    ement
     )
   "A list of packages to ensure are installed at launch.")
 
@@ -193,8 +194,6 @@
 	      :repo "zevlg/telega.el"
 	      :branch "release-0.8.0"
 	      :files (:defaults "etc" "server" "contrib" "Makefile")))
-
-;; (quelpa '(ement :fetcher github :repo "alphapapa/ement.el"))
 
 
 ;; some pinned packages
