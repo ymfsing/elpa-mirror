@@ -68,6 +68,7 @@
     consult
     consult-flycheck
     embark
+    embark-consult
     ;;; init-ui
     posframe
     all-the-icons
