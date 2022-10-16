@@ -67,6 +67,8 @@
     orderless
     consult
     consult-flycheck
+    consult-flyspell
+    consult-lsp
     embark
     embark-consult
     ;;; init-ui
