@@ -127,7 +127,6 @@
     anki-editor
     habitica
     org-roam
-    ;; emacsql-sqlite-builtin ;; for emacs 29
     org-roam-ui
     ;;; init-ruby
     ruby-mode
