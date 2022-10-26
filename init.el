@@ -158,7 +158,7 @@
     ;; nntwitter
     ;;; init-leetcode
     leetcode
-    ement
+    ;; ement
     )
   "A list of packages to ensure are installed at launch.")
 
