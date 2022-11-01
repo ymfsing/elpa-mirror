@@ -77,6 +77,8 @@
     consult-flycheck
     consult-flyspell
     consult-lsp
+    consult-project-extra
+    consult-notes
     embark
     embark-consult
     ;;; init-ui
@@ -158,7 +160,8 @@
     ;; nntwitter
     ;;; init-leetcode
     leetcode
-    ;; ement
+    ;;; init-chat
+    ement
     )
   "A list of packages to ensure are installed at launch.")
 
