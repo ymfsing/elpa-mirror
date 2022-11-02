@@ -110,11 +110,12 @@ jobs:
           force: true
 
       - name: Remove old release
-        uses: sgpublic/delete-release-action@v1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
-          release-drop: true
-          release-keep-count: 7
-          draft-drop: false
+          # repo: ymfsing/emacs-packages # defaults to current repo
+          keep_latest: 3
+          delete_tags: true
+          # delete_tag_pattern: beta # defaults to ""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
