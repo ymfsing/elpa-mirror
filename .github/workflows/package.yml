@@ -22,19 +22,6 @@ jobs:
           version: ${{ matrix.emacs_version }}
 
       - uses: actions/checkout@v3
-
-      - uses: sgpublic/delete-release-action@v1.0
-        with:
-          # repo: <owner>/<repoName> # defaults to current repo
-          release-drop: true
-          release-keep-count: 7
-          release-drop-tag: true
-          # pre-release-drop: false
-          # pre-release-keep-count: 3
-          # pre-release-drop-tag: false
-          draft-drop: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
       - name: Print emacs version
         run: |
@@ -121,3 +108,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: module
           force: true
+
+      - name: Remove old release
+        uses: sgpublic/delete-release-action@v1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release-drop: true
+          release-keep-count: 7
+          draft-drop: false
+
