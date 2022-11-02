@@ -112,7 +112,7 @@ jobs:
       - name: Remove old release
         uses: sgpublic/delete-release-action@v1.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           release-drop: true
           release-keep-count: 7
