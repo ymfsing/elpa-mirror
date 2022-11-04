@@ -175,8 +175,7 @@
 ;; Scans the list in mypackages
 ;; If the package listed is not already installed, install it
 (mapc #'(lambda (package)
-          (unless
-              (package-installed-p package)
+          (unless (package-installed-p package)
             (package-install package)))
       mypackages)
 
