@@ -183,9 +183,9 @@
       quelpa-git-clone-depth 1)
 
 (quelpa '(pyim-tsinghua-dict
-	      :fetcher github
-	      :repo "redguardtoo/pyim-tsinghua-dict"
-	      :files ("*.el" "*.pyim")))
+          :fetcher github
+		  :repo "redguardtoo/pyim-tsinghua-dict"
+		  :files ("*.el" "*.pyim")))
 
 (quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
 
