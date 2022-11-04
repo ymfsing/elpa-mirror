@@ -112,8 +112,7 @@ jobs:
       - name: Remove old release
         uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
-          # repo: ymfsing/emacs-packages # defaults to current repo
-          keep_latest: 3
+          keep_latest: 7
           delete_tags: true
           # delete_tag_pattern: beta # defaults to ""
         env:

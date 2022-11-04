@@ -162,6 +162,7 @@
     ;;; init-leetcode
     leetcode
     ;;; init-chat
+    telega
     ement
     )
   "A list of packages to ensure are installed at launch.")
@@ -200,11 +201,11 @@
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
-(quelpa '(telega
-	      :fetcher github
-	      :repo "zevlg/telega.el"
-	      :branch "release-0.8.0"
-	      :files (:defaults "etc" "server" "contrib" "Makefile")))
+;; (quelpa '(telega
+;;           :fetcher github
+;; 	      :repo "zevlg/telega.el"
+;; 	      :branch "release-0.8.0"
+;; 	      :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 
 ;; some pinned packages
