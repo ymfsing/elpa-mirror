@@ -164,6 +164,7 @@
     osm
     ;;; init-gnus
     ;; nntwitter
+    nndiscourse
     ;;; init-leetcode
     leetcode
     ;;; init-chat
