@@ -104,15 +104,15 @@
     blamer
     diff-hl
     ;;; init-lang
-    ;; eglot
+    eglot
     lsp-mode
     lsp-pyright
     lsp-ui
-    ;; citre
+    citre
     format-all
     aggressive-indent
     devdocs-browser
-    ;; dap-mode
+    dap-mode
     germanium
     ;;; init-applescript
     applescript-mode
@@ -120,7 +120,7 @@
     dockerfile-mode
     docker-compose-mode
     ;;; init-latex
-    ;; auctex
+    auctex
     ;;; init-lisp
     elisp-demos
     sly
