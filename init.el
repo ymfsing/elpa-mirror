@@ -79,6 +79,7 @@
     marginalia
     orderless
     consult
+    consult-dir
     consult-flycheck
     consult-flyspell
     consult-lsp
