@@ -171,6 +171,7 @@
     ;;; init-chat
     telega
     ement
+    mastodon
     )
   "A list of packages to ensure are installed at launch.")
 
