@@ -19,15 +19,13 @@
 
 (when (version< emacs-version "28")
   (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
-
 (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/"))
-
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (customize-set-variable 'package-archive-priorities
-                        '(("gnu"    . 99) ; prefer GNU packages
-                          ("nongnu" . 80) ; use non-gnu packages if not found in GNU elpa
-                          ("stable" . 70) ; prefer "released" versions from melpa
+                        '(("gnu"    . 30) ; prefer GNU packages
+                          ("nongnu" . 20) ; use non-gnu packages if not found in GNU elpa
+                          ;; ("stable" . 10) ; prefer "released" versions from melpa
                           ("melpa"  . 0)) ; if all else fails, get it from melpa
                         )
 
@@ -169,7 +167,6 @@
     ;;; init-leetcode
     leetcode
     ;;; init-chat
-    telega
     ement
     mastodon
     )
@@ -209,14 +206,13 @@
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
-;; (quelpa '(telega
-;;           :fetcher github
-;; 	      :repo "zevlg/telega.el"
-;; 	      :branch "release-0.8.0"
-;; 	      :files (:defaults "etc" "server" "contrib" "Makefile")))
-
-
 ;; some pinned packages
+
+(quelpa '(telega
+          :fetcher github
+	      :repo "zevlg/telega.el"
+	      :branch "release-0.8.0"
+	      :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
 ;; 	      :fetcher github
