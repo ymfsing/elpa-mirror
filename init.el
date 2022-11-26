@@ -196,7 +196,7 @@
 
 (quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
 
-(quelpa '(awesome-pair :fetcher github :repo "manateelazycat/awesome-pair"))
+;; (quelpa '(awesome-pair :fetcher github :repo "manateelazycat/awesome-pair"))
 
 (quelpa '(thing-edit :fetcher github :repo "manateelazycat/thing-edit"))
 
