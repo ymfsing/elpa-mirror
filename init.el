@@ -103,7 +103,6 @@
     blamer
     diff-hl
     ;;; init-lang
-    eglot
     lsp-mode
     lsp-pyright
     lsp-ui
@@ -163,11 +162,11 @@
     osm
     ;;; init-gnus
     ;; nntwitter
-    nndiscourse
+    ;; nndiscourse
     ;;; init-leetcode
     leetcode
     ;;; init-chat
-    ement
+    ;; ement
     mastodon
     )
   "A list of packages to ensure are installed at launch.")
