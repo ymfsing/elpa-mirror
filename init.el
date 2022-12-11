@@ -82,7 +82,7 @@
     consult-flyspell
     consult-lsp
     consult-project-extra
-    consult-notes
+    ;; consult-notes
     embark
     embark-consult
     ;;; init-ui
