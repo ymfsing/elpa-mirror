@@ -204,11 +204,6 @@
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
 
-(quelpa '(kind-all-the-icons
-          :fetcher url
-          :url "https://raw.githubusercontent.com/Hirozy/kind-all-the-icons/main/kind-all-the-icons.el"
-          ))
-
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
