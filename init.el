@@ -88,6 +88,8 @@
     ;;; init-ui
     posframe
     all-the-icons
+    all-the-icons-dired
+    all-the-icons-ibuffer
     beacon
     doom-themes
     doom-modeline
@@ -200,6 +202,8 @@
 (quelpa '(thing-edit :fetcher github :repo "manateelazycat/thing-edit"))
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
+
+(quelpa '(kind-all-the-icons :fetcher github :repo "Hirozy/kind-all-the-icons"))
 
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
