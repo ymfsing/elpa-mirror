@@ -19,6 +19,7 @@
 
 (when (version< emacs-version "28")
   (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
+
 (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
@@ -204,9 +205,8 @@
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
 
 (quelpa '(kind-all-the-icons
-          :fetcher github
-          :repo "Hirozy/kind-all-the-icons"
-          :files ("*.el")
+          :fetcher url
+          :url "https://raw.githubusercontent.com/Hirozy/kind-all-the-icons/main/kind-all-the-icons.el"
           ))
 
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
@@ -217,15 +217,15 @@
 
 (quelpa '(telega
           :fetcher github
-	      :repo "zevlg/telega.el"
-	      :branch "release-0.8.0"
-	      :files (:defaults "etc" "server" "contrib" "Makefile")))
+	        :repo "zevlg/telega.el"
+	        :branch "release-0.8.0"
+	        :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
-;; 	      :fetcher github
-;; 	      :repo "Malabarba/aggressive-indent-mode"
-;; 	      :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
-;; 	      :files ("*.el")))
+;; 	         :fetcher github
+;; 	         :repo "Malabarba/aggressive-indent-mode"
+;; 	         :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
+;; 	         :files ("*.el")))
 
 
 
