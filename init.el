@@ -164,14 +164,13 @@
     ;;; init-leetcode
     leetcode
     ;;; init-chat
-    telega
     ;; ement
     mastodon
     )
   "A list of packages to ensure are installed at launch.")
 
-(setq package-pinned-packages '((telega . "melpa-stable")
-                                ))
+;; (setq package-pinned-packages '((telega . "melpa-stable")
+;;                                 ))
 
 ;; Scans the list in mypackages
 ;; If the package listed is not already installed, install it
@@ -211,11 +210,11 @@
 
 ;; some pinned packages
 
-;; (quelpa '(telega
-;;           :fetcher github
-;; 	         :repo "zevlg/telega.el"
-;; 	         :branch "release-0.8.0"
-;; 	         :files (:defaults "etc" "server" "contrib" "Makefile")))
+(quelpa '(telega
+          :fetcher github
+	      :repo "zevlg/telega.el"
+	      :branch "release-0.8.0"
+	      :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
 ;; 	         :fetcher github
