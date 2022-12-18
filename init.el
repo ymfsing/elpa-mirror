@@ -204,6 +204,8 @@
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
 
+(quelpa '(kind-all-the-icons :fetcher github :repo "ymfsing/kind-all-the-icons"))
+
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
@@ -221,7 +223,6 @@
 ;; 	         :repo "Malabarba/aggressive-indent-mode"
 ;; 	         :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
 ;; 	         :files ("*.el")))
-
 
 
 ;;; init.el ends here
