@@ -13,22 +13,17 @@
 
 (require 'package)
 
-;; Emacs 27.x has gnu elpa as the default
-;; Emacs 28.x adds the nongnu elpa to the list by default, so only
-;; need to add nongnu when this isn't Emacs 28+
+(setq package-archives '(("elpa"         . "https://elpa.gnu.org/packages/")
+                         ("elpa-devel"   . "https://elpa.gnu.org/devel/")
+                         ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
+                         ("melpa"        . "https://melpa.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+                         ))
 
-(when (version< emacs-version "28")
-  (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
-
-(add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
-(customize-set-variable 'package-archive-priorities
-                        '(("gnu"    . 30) ; prefer GNU packages
-                          ("nongnu" . 20) ; use non-gnu packages if not found in GNU elpa
-                          ;; ("stable" . 10) ; prefer "released" versions from melpa
-                          ("melpa"  . 0)) ; if all else fails, get it from melpa
-                        )
+(setq package-archive-priorities '(("elpa"   . 40)
+                                   ("nongnu" . 30)
+                                   ("melpa"  . 10)
+                                   ))
 
 (package-initialize)
 (package-refresh-contents)
@@ -169,10 +164,14 @@
     ;;; init-leetcode
     leetcode
     ;;; init-chat
+    telega
     ;; ement
     mastodon
     )
   "A list of packages to ensure are installed at launch.")
+
+(setq package-pinned-packages '((telega . "melpa-stable")
+                                ))
 
 ;; Scans the list in mypackages
 ;; If the package listed is not already installed, install it
@@ -212,11 +211,11 @@
 
 ;; some pinned packages
 
-(quelpa '(telega
-          :fetcher github
-	        :repo "zevlg/telega.el"
-	        :branch "release-0.8.0"
-	        :files (:defaults "etc" "server" "contrib" "Makefile")))
+;; (quelpa '(telega
+;;           :fetcher github
+;; 	         :repo "zevlg/telega.el"
+;; 	         :branch "release-0.8.0"
+;; 	         :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
 ;; 	         :fetcher github
