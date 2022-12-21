@@ -101,14 +101,15 @@
     blamer
     diff-hl
     ;;; init-lang
-    lsp-mode
-    lsp-pyright
-    lsp-ui
+    ;; lsp-mode
+    ;; lsp-pyright
+    ;; lsp-ui
+    ;; dap-mode
+    eglot
     citre
     format-all
     aggressive-indent
     devdocs-browser
-    dap-mode
     germanium
     ;;; init-applescript
     applescript-mode
@@ -212,8 +213,8 @@
 
 (quelpa '(telega
           :fetcher github
-	      :repo "zevlg/telega.el"
-	      :branch "release-0.8.0"
+          :repo "zevlg/telega.el"
+          :branch "release-0.8.0"
 	      :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
