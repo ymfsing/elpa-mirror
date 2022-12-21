@@ -74,11 +74,6 @@
     orderless
     consult
     consult-dir
-    consult-flycheck
-    consult-flyspell
-    consult-lsp
-    consult-project-extra
-    ;; consult-notes
     embark
     embark-consult
     ;;; init-ui
