@@ -53,7 +53,6 @@
     vundo
     ;; grab-mac-link
     org-mac-link
-    evil-nerd-commenter
     ;; avy
     hl-todo
     speed-type
