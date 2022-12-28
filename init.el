@@ -200,6 +200,11 @@
 
 (quelpa '(kind-all-the-icons :fetcher github :repo "ymfsing/kind-all-the-icons"))
 
+(quelpa '(sly-el-indent
+          :fetcher github
+          :repo "cireu/sly-el-indent"
+          :files ("*.el" "lib")))
+
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
@@ -210,13 +215,13 @@
           :fetcher github
           :repo "zevlg/telega.el"
           :branch "release-0.8.0"
-	      :files (:defaults "etc" "server" "contrib" "Makefile")))
+          :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
-;; 	         :fetcher github
-;; 	         :repo "Malabarba/aggressive-indent-mode"
-;; 	         :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
-;; 	         :files ("*.el")))
+;;           :fetcher github
+;;           :repo "Malabarba/aggressive-indent-mode"
+;;           :commit "70b3f0add29faff41e480e82930a231d88ee9ca7"
+;;           :files ("*.el")))
 
 
 ;;; init.el ends here
