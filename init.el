@@ -198,7 +198,7 @@
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
 
-(quelpa '(kind-all-the-icons :fetcher github :repo "ymfsing/kind-all-the-icons"))
+;; (quelpa '(kind-all-the-icons :fetcher github :repo "ymfsing/kind-all-the-icons"))
 
 (quelpa '(sly-el-indent
           :fetcher github
