@@ -183,6 +183,8 @@
       quelpa-melpa-recipe-stores nil
       quelpa-git-clone-depth 1)
 
+(quelpa '(on :fetcher github :repo "ajgrf/on.el"))
+
 (quelpa '(pyim-tsinghua-dict
           :fetcher github
           :repo "redguardtoo/pyim-tsinghua-dict"
