@@ -42,6 +42,7 @@
     pyim
     osx-dictionary
     fanyi
+    go-translate
     ;;; init-completion
     yasnippet
     ;; yasnippet-snippets
@@ -53,7 +54,7 @@
     vundo
     ;; grab-mac-link
     org-mac-link
-    ;; avy
+    avy
     hl-todo
     speed-type
     flycheck
@@ -86,7 +87,7 @@
     doom-modeline
     diminish
     rainbow-delimiters
-    ;; symbol-overlay
+    symbol-overlay
     burly
     winum
     shackle
@@ -199,8 +200,6 @@
 (quelpa '(thing-edit :fetcher github :repo "manateelazycat/thing-edit"))
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
-
-;; (quelpa '(kind-all-the-icons :fetcher github :repo "ymfsing/kind-all-the-icons"))
 
 (quelpa '(sly-el-indent
           :fetcher github
