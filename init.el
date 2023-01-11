@@ -210,10 +210,10 @@
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
-(quelpa '(nursery
-          :fetcher github
-          :repo "chrisbarrett/nursery"
-          :files ("lisp/*.el")))
+;; (quelpa '(nursery
+;;           :fetcher github
+;;           :repo "chrisbarrett/nursery"
+;;           :files ("lisp/*.el")))
 
 ;; some pinned packages
 
