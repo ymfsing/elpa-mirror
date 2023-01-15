@@ -208,6 +208,8 @@
           :repo "manateelazycat/lsp-bridge"
           :files ("*")))
 
+(quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
+
 (quelpa '(sly-el-indent
           :fetcher github
           :repo "cireu/sly-el-indent"
