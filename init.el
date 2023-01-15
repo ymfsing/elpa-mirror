@@ -74,7 +74,8 @@
     orderless
     consult
     consult-dir
-    consult-eglot
+    consult-lsp
+    consult-yasnippet
     embark
     embark-consult
     ;;; init-ui
