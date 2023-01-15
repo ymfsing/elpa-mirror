@@ -201,12 +201,14 @@
 
 (quelpa '(auto-save :fetcher github :repo "manateelazycat/auto-save"))
 
+(quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
+
+(quelpa '(lsp-bridge :fetcher github :repo "manateelazycat/lsp-bridge"))
+
 (quelpa '(sly-el-indent
           :fetcher github
           :repo "cireu/sly-el-indent"
           :files ("*.el" "lib")))
-
-(quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
