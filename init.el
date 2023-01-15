@@ -203,10 +203,10 @@
 
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
-(quelpa '(lsp-bridge
-          :fetcher github
-          :repo "manateelazycat/lsp-bridge"
-          :files ("*")))
+;; (quelpa '(lsp-bridge
+;;           :fetcher github
+;;           :repo "manateelazycat/lsp-bridge"
+;;           :files ("*")))
 
 ;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
