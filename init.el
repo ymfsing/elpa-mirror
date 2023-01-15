@@ -96,12 +96,12 @@
     ;;; vc-msg
     blamer
     diff-hl
-    ;;; init-lang
-    ;; lsp-mode
-    ;; lsp-pyright
+    ;;; init-prog
+    lsp-mode
+    lsp-pyright
     ;; lsp-ui
     ;; dap-mode
-    eglot
+    ;; eglot
     citre
     format-all
     aggressive-indent
