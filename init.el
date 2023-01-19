@@ -153,6 +153,7 @@
     ;;; init-browser
     ;; reddigg
     hnreader
+    pdf-tools
     ;;; init-draw
     plantuml-mode
     osm
