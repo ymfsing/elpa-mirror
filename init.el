@@ -212,10 +212,10 @@
 
 ;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
-(quelpa '(sly-el-indent
-          :fetcher github
-          :repo "cireu/sly-el-indent"
-          :files ("*.el" "lib")))
+;; (quelpa '(sly-el-indent
+;;           :fetcher github
+;;           :repo "cireu/sly-el-indent"
+;;           :files ("*.el" "lib")))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
