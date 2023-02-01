@@ -13,16 +13,16 @@
 
 (require 'package)
 
-(setq package-archives '(("elpa"         . "https://elpa.gnu.org/packages/")
-                         ("elpa-devel"   . "https://elpa.gnu.org/devel/")
-                         ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
-                         ("melpa"        . "https://melpa.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+(setq package-archives '(("elpa"   . "https://elpa.gnu.org/packages/")
+                         ;; ("elpa-devel"   . "https://elpa.gnu.org/devel/")
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+                         ("melpa"  . "https://melpa.org/packages/")
+                         ;; ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ))
 
-(setq package-archive-priorities '(("elpa"   . 40)
+(setq package-archive-priorities '(("melpa"  . 50)
                                    ("nongnu" . 30)
-                                   ("melpa"  . 10)
+                                   ("elpa"   . 10)
                                    ))
 
 (package-initialize)
