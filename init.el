@@ -154,6 +154,7 @@
     ;; reddigg
     hnreader
     pdf-tools
+    nov
     ;;; init-draw
     plantuml-mode
     osm
@@ -197,7 +198,7 @@
 
 (quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
 
-;; (quelpa '(awesome-pair :fetcher github :repo "manateelazycat/awesome-pair"))
+(quelpa '(fingertip :fetcher github :repo "manateelazycat/fingertip"))
 
 (quelpa '(thing-edit :fetcher github :repo "manateelazycat/thing-edit"))
 
@@ -217,7 +218,7 @@
 ;;           :repo "cireu/sly-el-indent"
 ;;           :files ("*.el" "lib")))
 
-(quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
+;; (quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
