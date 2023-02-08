@@ -2,9 +2,9 @@ Mirror Emacs Lisp package archives. Used to create and maintain mirrors under Gi
 
 * Source
 
-** [[https://github.com/melpa/melpa][melpa]]
+** [[https://elpa.gnu.org/][ELPA]]
 
-** [[https://github.com/d12frosted/elpa-mirror][GitHub elpa mirror]]
+** [[https://github.com/melpa/melpa][melpa]]
 
 ** [[https://github.com/quelpa/quelpa][quelpa]]
 
@@ -17,13 +17,17 @@ Mirror Emacs Lisp package archives. Used to create and maintain mirrors under Gi
 Just setup =package-archives= in your =init.el= file.
 
 #+BEGIN_SRC emacs-lisp
-  (setq package-archives
-        '(("mymirror" . "https://raw.githubusercontent.com/ymfsing/elpa-mirror/packages/")))
+
+(setq package-archives
+      '(("myelpa" . "https://raw.githubusercontent.com/ymfsing/emacs-packages/elpa/")))
+
 #+END_SRC
 
 ** git submodule
 
 #+begin_src shell
+
 cd ~/.emacs.d
-git submodule add -b module https://github.com/ymfsing/emacs-packages mymodule
+git submodule add -b package https://github.com/ymfsing/emacs-packages external-packages
+
 #+end_src
