@@ -106,7 +106,7 @@ jobs:
         with:
           directory: /tmp/mymodule
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: module
+          branch: package
           force: true
 
       - name: Remove old release
