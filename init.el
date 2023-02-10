@@ -14,10 +14,8 @@
 (require 'package)
 
 (setq package-archives '(("elpa"   . "https://elpa.gnu.org/packages/")
-                         ;; ("elpa-devel"   . "https://elpa.gnu.org/devel/")
                          ("nongnu" . "https://elpa.nongnu.org/nongnu/")
                          ("melpa"  . "https://melpa.org/packages/")
-                         ;; ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ))
 
 (setq package-archive-priorities '(("melpa"  . 50)
@@ -52,8 +50,6 @@
     corfu-terminal
     ;;; init-edit
     vundo
-    ;; grab-mac-link
-    org-mac-link
     avy
     hl-todo
     speed-type
@@ -63,8 +59,6 @@
     dired-rsync
     diredfl
     ;;; init-keymaps
-    ;; evil
-    ;; evil-lion
     meow
     keyfreq
     keycast
@@ -140,6 +134,8 @@
     org-roam-ui
     ;;; init-ruby
     ruby-mode
+    ;;; init-sh
+    vterm
     ;;; init-web
     web-mode
     emmet-mode
@@ -210,22 +206,15 @@
 ;;           :fetcher github
 ;;           :repo "manateelazycat/lsp-bridge"
 ;;           :files ("*")))
-
+;;
 ;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
-;; (quelpa '(sly-el-indent
-;;           :fetcher github
-;;           :repo "cireu/sly-el-indent"
-;;           :files ("*.el" "lib")))
+(quelpa '(ymfsing/org-mac-link :fetcher github :repo "ymfsing/org-mac-link"))
 
 ;; (quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
-;; (quelpa '(nursery
-;;           :fetcher github
-;;           :repo "chrisbarrett/nursery"
-;;           :files ("lisp/*.el")))
 
 ;; some pinned packages
 
