@@ -136,6 +136,7 @@
     ruby-mode
     ;;; init-sh
     vterm
+    vterm-toggle
     ;;; init-web
     web-mode
     emmet-mode
