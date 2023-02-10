@@ -209,7 +209,7 @@
 ;;
 ;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
-(quelpa '(ymfsing/org-mac-link :fetcher github :repo "ymfsing/org-mac-link"))
+(quelpa '(org-mac-link :fetcher github :repo "ymfsing/org-mac-link"))
 
 ;; (quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
 
