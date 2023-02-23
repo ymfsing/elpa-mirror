@@ -148,8 +148,6 @@
     ;;; init-blog
     org-static-blog
     ;;; init-browser
-    ;; reddigg
-    hnreader
     pdf-tools
     nov
     ;;; init-draw
@@ -157,12 +155,11 @@
     osm
     ;;; init-gnus
     ;; nntwitter
-    ;; nndiscourse
     ;;; init-leetcode
     leetcode
     ;;; init-chat
     ;; ement
-    mastodon
+    ;; mastodon
     )
   "A list of packages to ensure are installed at launch.")
 
