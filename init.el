@@ -45,9 +45,9 @@
     yasnippet
     ;; yasnippet-snippets
     ;; company
-    cape
-    corfu
-    corfu-terminal
+    ;; cape
+    ;; corfu
+    ;; corfu-terminal
     ;;; init-edit
     vundo
     avy
@@ -92,8 +92,8 @@
     blamer
     diff-hl
     ;;; init-prog
-    lsp-mode
-    lsp-pyright
+    ;; lsp-mode
+    ;; lsp-pyright
     ;; lsp-ui
     ;; dap-mode
     ;; eglot
@@ -108,7 +108,7 @@
     dockerfile-mode
     docker-compose-mode
     ;;; init-latex
-    auctex
+    ;; auctex
     ;;; init-lisp
     elisp-demos
     sly
@@ -128,7 +128,7 @@
     toc-org
     ox-pandoc
     anki-editor
-    habitica
+    ;; habitica
     org-roam
     emacsql-sqlite-builtin
     org-roam-ui
@@ -188,7 +188,7 @@
           :repo "redguardtoo/pyim-tsinghua-dict"
           :files ("*.el" "*.pyim")))
 
-(quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
+;; (quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
 
 (quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
 
@@ -204,23 +204,24 @@
           :fetcher github
           :repo "manateelazycat/lsp-bridge"
           :files ("*")))
-;;
-;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
+
+(quelpa '(popon :fetcher git :url "https://codeberg.org/akib/emacs-popon.git"))
+(quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
 (quelpa '(org-mac-link :fetcher github :repo "ymfsing/org-mac-link"))
 
-;; (quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
+(quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
 
 ;; some pinned packages
 
-(quelpa '(telega
-          :fetcher github
-          :repo "zevlg/telega.el"
-          :branch "release-0.8.0"
-          :files (:defaults "etc" "server" "contrib" "Makefile")))
+;; (quelpa '(telega
+;;           :fetcher github
+;;           :repo "zevlg/telega.el"
+;;           :branch "release-0.8.0"
+;;           :files (:defaults "etc" "server" "contrib" "Makefile")))
 
 ;; (quelpa '(aggressive-indent
 ;;           :fetcher github
