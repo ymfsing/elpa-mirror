@@ -68,7 +68,7 @@
     orderless
     consult
     consult-dir
-    consult-lsp
+    ;; consult-lsp
     consult-yasnippet
     embark
     embark-consult
