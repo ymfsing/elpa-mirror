@@ -131,7 +131,6 @@
     ;; habitica
     org-roam
     emacsql-sqlite-builtin
-    org-roam-timestamps
     org-roam-ui
     ;;; init-ruby
     ruby-mode
