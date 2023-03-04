@@ -128,7 +128,7 @@
     toc-org
     ox-pandoc
     anki-editor
-    ;; habitica
+    habitica
     org-roam
     emacsql-sqlite-builtin
     org-roam-ui
