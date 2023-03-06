@@ -135,6 +135,8 @@
     org-roam
     emacsql-sqlite-builtin
     org-roam-ui
+    ;;; init-python
+    jupyter
     ;;; init-ruby
     ruby-mode
     ;;; init-sh
