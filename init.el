@@ -49,9 +49,9 @@
     yasnippet
     ;; yasnippet-snippets
     ;; company
-    ;; cape
-    ;; corfu
-    ;; corfu-terminal
+    cape
+    corfu
+    corfu-terminal
     ;;; init-edit
     vundo
     avy
@@ -96,8 +96,8 @@
     blamer
     diff-hl
     ;;; init-prog
-    ;; lsp-mode
-    ;; lsp-pyright
+    lsp-mode
+    lsp-pyright
     ;; lsp-ui
     ;; dap-mode
     ;; eglot
@@ -206,13 +206,13 @@
 
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
-(quelpa '(lsp-bridge
-          :fetcher github
-          :repo "manateelazycat/lsp-bridge"
-          :files ("*")))
+;; (quelpa '(lsp-bridge
+;;           :fetcher github
+;;           :repo "manateelazycat/lsp-bridge"
+;;           :files ("*")))
 
-(quelpa '(popon :fetcher git :url "https://codeberg.org/akib/emacs-popon.git"))
-(quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
+;; (quelpa '(popon :fetcher git :url "https://codeberg.org/akib/emacs-popon.git"))
+;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
 (quelpa '(org-mac-link :fetcher github :repo "ymfsing/org-mac-link"))
 
