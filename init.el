@@ -194,7 +194,7 @@
           :repo "redguardtoo/pyim-tsinghua-dict"
           :files ("*.el" "*.pyim")))
 
-;; (quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
+(quelpa '(cape-yasnippet :fetcher github :repo "elken/cape-yasnippet"))
 
 (quelpa '(color-rg :fetcher github :repo "manateelazycat/color-rg"))
 
