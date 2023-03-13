@@ -72,7 +72,8 @@
     orderless
     consult
     consult-dir
-    ;; consult-lsp
+    consult-lsp
+    consult-org-roam
     consult-yasnippet
     embark
     embark-consult
