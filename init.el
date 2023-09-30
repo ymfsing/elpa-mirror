@@ -32,7 +32,7 @@
 
 (defvar mypackages
   '(
-    ;;; init-packages
+    ;;; elpa mirror
     gnu-elpa-keyring-update
     quelpa
     elpa-mirror
@@ -108,23 +108,16 @@
     aggressive-indent
     devdocs-browser
     germanium
-    ;;; init-applescript
     applescript-mode
-    ;;; init-docker
     dockerfile-mode
     docker-compose-mode
-    ;;; init-latex
     ;; auctex
-    ;;; init-lisp
     elisp-demos
     sly
     suggest
-    ;;; init-lua
     lua-mode
-    ;;; init-markdown
     markdown-mode
     markdown-toc
-    ;;; init-org
     org
     org-contrib
     org-appear
@@ -138,34 +131,24 @@
     org-roam
     emacsql-sqlite-builtin
     org-roam-ui
-    ;;; init-python
     jupyter
-    ;;; init-ruby
     ruby-mode
-    ;;; init-sh
     vterm
     vterm-toggle
-    ;;; init-web
     web-mode
     emmet-mode
     typescript-mode
     impatient-mode
-    ;;; init-serialization
     json-mode
     yaml-mode
-    ;;; init-blog
+    nix-mode
     org-static-blog
-    ;;; init-browser
     pdf-tools
     nov
-    ;;; init-draw
     plantuml-mode
     osm
-    ;;; init-gnus
     ;; nntwitter
-    ;;; init-leetcode
     leetcode
-    ;;; init-chat
     ;; ement
     ;; mastodon
     )
