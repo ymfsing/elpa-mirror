@@ -133,8 +133,8 @@
     org-roam-ui
     jupyter
     ruby-mode
-    vterm
-    vterm-toggle
+    ;; vterm
+    ;; vterm-toggle
     web-mode
     emmet-mode
     typescript-mode
