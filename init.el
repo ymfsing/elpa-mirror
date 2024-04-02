@@ -40,6 +40,7 @@
     ;;; init
     ;; esup
     gcmh
+    compat
     ;;; init-chinese
     pyim
     osx-dictionary
