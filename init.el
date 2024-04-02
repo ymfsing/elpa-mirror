@@ -40,7 +40,6 @@
     ;;; init
     ;; esup
     gcmh
-    compat
     ;;; init-chinese
     pyim
     osx-dictionary
@@ -172,6 +171,8 @@
       quelpa-update-melpa-p nil
       quelpa-melpa-recipe-stores nil
       quelpa-git-clone-depth 1)
+
+(quelpa '(compat :fetcher github :repo "emacs-compat/compat"))
 
 (quelpa '(on :fetcher github :repo "ajgrf/on.el"))
 
