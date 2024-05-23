@@ -33,7 +33,7 @@
 (defvar mypackages
   '(
     ;;; elpa mirror
-    gnu-elpa-keyring-update
+    ;; gnu-elpa-keyring-update
     quelpa
     elpa-mirror
     auto-package-update
