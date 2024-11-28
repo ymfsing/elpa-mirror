@@ -205,6 +205,11 @@
 
 (quelpa '(org-media-note :fetcher github :repo "yuchen-lea/org-media-note"))
 
+(quelpa '(aider
+          :fetcher github
+          :repo "tninja/aider.el"
+          :files ("*.el")))
+
 
 ;; some pinned packages
 
