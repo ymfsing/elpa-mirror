@@ -20,7 +20,7 @@
 (setq package-archives '(("elpa"   . "https://elpa.gnu.org/packages/")
                          ("nongnu" . "https://elpa.nongnu.org/nongnu/")
                          ("melpa"  . "https://melpa.org/packages/")
-                         ("emacsql-melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/20f15961e2cfad48aa3bf5285e73a1c17847773e/melpa/")
+                         ("gh-melpa-20241111" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/20f15961e2cfad48aa3bf5285e73a1c17847773e/melpa/")
                          ))
 
 (setq package-archive-priorities '(("melpa"  . 50)
@@ -30,7 +30,7 @@
 
 (when (boundp 'package-pinned-packages)
   (setq package-pinned-packages
-        '((emacsql . "emacsql-melpa"))))
+        '((emacsql . "gh-melpa-20241111"))))
 
 (package-initialize)
 (package-refresh-contents)
