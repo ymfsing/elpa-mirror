@@ -204,7 +204,11 @@
 ;; (quelpa '(popon :fetcher git :url "https://codeberg.org/akib/emacs-popon.git"))
 ;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
+(quelpa '(org-link-archive :fetcher github :repo "farynaio/org-link-archive"))
+
 (quelpa '(org-mac-link :fetcher github :repo "ymfsing/org-mac-link"))
+
+(quelpa '(org-imagine :fetcher github :repo "metaescape/org-imagine"))
 
 (quelpa '(org-noter-plus :fetcher github :repo "yuchen-lea/org-noter-plus"))
 
