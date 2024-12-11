@@ -69,13 +69,7 @@ jobs:
           cd /tmp
           tar czf ${{ env.TAR_NAME }} mymodule
 
-      - name: Push release
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          artifacts: "/tmp/${{ env.TAR_NAME }}"
-          token: ${{ secrets.REPO_TOKEN }}
-
+      # # BUG github action error
       # - name: Push release
       #   uses: softprops/action-gh-release@master
       #   env:
