@@ -196,13 +196,13 @@
 
 (quelpa '(clue :fetcher github :repo "AmaiKinono/clue"))
 
-;; (quelpa '(lsp-bridge
-;;           :fetcher github
-;;           :repo "manateelazycat/lsp-bridge"
-;;           :files ("*")))
+(quelpa '(lsp-bridge :fetcher github
+                     :repo "manateelazycat/lsp-bridge"
+                     :files ("*.el" "*.py" "acm" "core" "langserver"
+                             "multiserver" "resources")))
 
-;; (quelpa '(popon :fetcher git :url "https://codeberg.org/akib/emacs-popon.git"))
-;; (quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
+(quelpa '(popon :fetcher git :url "https://codeberg.org/akib/emacs-popon.git"))
+(quelpa '(acm-terminal :fetcher github :repo "twlz0ne/acm-terminal"))
 
 (quelpa '(org-link-archive :fetcher github :repo "farynaio/org-link-archive"))
 
