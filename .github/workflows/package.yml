@@ -3,7 +3,7 @@ name: Emacs packages publisher
 on:
   push:
     paths-ignore:
-      - '*.org'
+      - "*.org"
     branches:
       - main
   schedule:
@@ -71,11 +71,10 @@ jobs:
 
       - name: Push release
         uses: ncipollo/release-action@v1
-        env:
-          with:
-            allowUpdates: true
-            artifacts: "/tmp/${{ env.TAR_NAME }}"
-            token: ${{ secrets.REPO_TOKEN }}
+        with:
+          allowUpdates: true
+          artifacts: "/tmp/${{ env.TAR_NAME }}"
+          token: ${{ secrets.REPO_TOKEN }}
 
       # - name: Push release
       #   uses: softprops/action-gh-release@master
@@ -85,7 +84,7 @@ jobs:
       #     files: /tmp/${{ env.TAR_NAME }}
       #     name: ${{ env.RELEASE_NAME }}
       #     tag_name: ${{ env.TAG_NAME }}
-          
+
       - name: Delete files for module
         run: |
           cd /tmp/mymodule
@@ -125,4 +124,3 @@ jobs:
           # delete_tag_pattern: beta # defaults to ""
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
