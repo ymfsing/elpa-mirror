@@ -1,0 +1,120 @@
+name: Emacs packages publisher
+
+on:
+  push:
+    paths-ignore:
+      - "*.org"
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        emacs_version:
+          - 29.1
+    steps:
+      - uses: purcell/setup-emacs@master
+        with:
+          version: ${{ matrix.emacs_version }}
+
+      - uses: actions/checkout@v3
+
+      - name: Print emacs version
+        run: |
+          emacs --version
+
+      - name: Install dependency
+        run: |
+          sudo apt install libarchive-tools
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          echo "RELEASE_NAME=elpa archive on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAR_NAME=emacs-modules-$(date +%Y%m%d%H%M).tar.gz" >> $GITHUB_ENV
+
+      - name: Check startup
+        run: make startup
+
+      - name: Backup packages for elpa
+        run: |
+          mkdir -p "/tmp/myelpa"
+          make backup
+
+      - name: Commit files for elpa
+        run: |
+          cd /tmp/myelpa
+          git init
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "$(date '+%y/%m/%d %H:%M:%S')"
+
+      - name: Push for elpa
+        uses: ad-m/github-push-action@master
+        with:
+          directory: /tmp/myelpa
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: elpa
+          force: true
+
+      - name: Backup packages for module
+        run: |
+          cp -vR ~/.emacs.d/elpa /tmp/mymodule
+
+      - name: Archive mymodule for backup
+        run: |
+          cd /tmp
+          tar czf ${{ env.TAR_NAME }} mymodule
+
+      # # BUG github action error
+      # - name: Push release
+      #   uses: softprops/action-gh-release@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+      #   with:
+      #     files: /tmp/${{ env.TAR_NAME }}
+      #     name: ${{ env.RELEASE_NAME }}
+      #     tag_name: ${{ env.TAG_NAME }}
+      
+      - name: Delete files for module
+        run: |
+          cd /tmp/mymodule
+          rm -rf archives
+          rm -rf gnupg
+          rm -rf auto-package-update*
+          rm -rf elpa-mirror*
+          rm -rf gnu-elpa-keyring-update*
+          rm -rf quelpa*
+          rm -rf *.signed
+          find . -name '*.elc' | xargs rm -rf
+          find . -name '*autoloads.el' | xargs rm -rf
+          find . -name '*pkg.el' | xargs rm -rf
+
+      - name: Commit files for module
+        run: |
+          cd /tmp/mymodule
+          git init
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "$(date '+%y/%m/%d %H:%M:%S')"
+
+      - name: Push for module
+        uses: ad-m/github-push-action@master
+        with:
+          directory: /tmp/mymodule
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: package
+          force: true
+
+      - name: Remove old release
+        uses: dev-drprasad/delete-older-releases@v0.2.1
+        with:
+          keep_latest: 7
+          delete_tags: true
+          # delete_tag_pattern: beta # defaults to ""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

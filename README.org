@@ -1,0 +1,33 @@
+Mirror Emacs Lisp package archives. Used to create and maintain mirrors under Git repository.
+
+* Source
+
+** [[https://elpa.gnu.org/][ELPA]]
+
+** [[https://github.com/melpa/melpa][melpa]]
+
+** [[https://github.com/quelpa/quelpa][quelpa]]
+
+** [[https://github.com/redguardtoo/elpa-mirror][redguardtoo elpa mirror]]
+
+* Usage
+
+** package.el
+
+Just setup =package-archives= in your =init.el= file.
+
+#+BEGIN_SRC emacs-lisp
+
+(setq package-archives
+      '(("myelpa" . "https://raw.githubusercontent.com/ymfsing/emacs-packages/elpa/")))
+
+#+END_SRC
+
+** git submodule
+
+#+begin_src shell
+
+cd ~/.emacs.d
+git submodule add -b package https://github.com/ymfsing/emacs-packages external-packages
+
+#+end_src
