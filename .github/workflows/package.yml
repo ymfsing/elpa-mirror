@@ -70,14 +70,14 @@ jobs:
           tar czf ${{ env.TAR_NAME }} mymodule
 
       # # BUG github action error
-      # - name: Push release
-      #   uses: softprops/action-gh-release@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-      #   with:
-      #     files: /tmp/${{ env.TAR_NAME }}
-      #     name: ${{ env.RELEASE_NAME }}
-      #     tag_name: ${{ env.TAG_NAME }}
+      - name: Push release
+        uses: softprops/action-gh-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        with:
+          files: /tmp/${{ env.TAR_NAME }}
+          name: ${{ env.RELEASE_NAME }}
+          tag_name: ${{ env.TAG_NAME }}
 
       - name: Delete files for module
         run: |
