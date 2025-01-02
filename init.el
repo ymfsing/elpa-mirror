@@ -70,7 +70,8 @@
     diredfl
     ;;; init-keymaps
     evil
-    meow
+    evil-lion
+    ;; meow
     keyfreq
     keycast
     ;;; init-minibuffer
