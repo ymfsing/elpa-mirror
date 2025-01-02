@@ -69,6 +69,7 @@
     dired-rsync
     diredfl
     ;;; init-keymaps
+    evil
     meow
     keyfreq
     keycast
